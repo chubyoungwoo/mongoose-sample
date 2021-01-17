@@ -3,7 +3,7 @@ const Todo = require('../models/todo');
 
 // Find All
 router.get('/', (req, res) => {
-  Todo.findAll()
+  Todo.findAll() 
     .then((todos) => {
       if (!todos.length) return res.status(404).send({ err: 'Todo not found' });
       res.send(`find successfully: ${todos}`);
